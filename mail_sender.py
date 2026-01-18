@@ -17,7 +17,7 @@ def clean_body_text(body: str) -> str:
 def build_sent_text(email: dict) -> str:
     return (
         f"Кому: {email['recipient']}\n"
-        f"От: {email['sender']}\n"
+        f"От: {email['masked_sender']}\n"
         f"Тема: {email['subject']}\n"
         f"Дата: {email['date']}\n\n"
         f"{clean_body_text(email['body'])}"
